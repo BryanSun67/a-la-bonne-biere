@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.navbar {
+  background-color: #a57c52; 
+  color: white;
+  padding: 10px 20px;
+  display: flex; 
+  justify-content: flex-end; 
+  list-style: none; 
+}
+.navbar-logo {
+  height: 60px;
+  margin-left: 0; 
+  margin-right: auto; 
+}
+.imagelogo {
+  text-align: center; 
+  margin-top: 0px; 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: rgb(243, 225, 194);
+}
+h1 {
+  font-weight: 700;
+  text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #fcfcfc;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 15px;
+}
+p {
+  text-align: center;
+}
+.infos {
+  text-align: center;
+}
+.horaires {
+  text-align: center;
+}
+.footer {
+  background-color: #a57c52;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.logo {
+  max-width: 400px; 
+  display: block;   
+  margin: 0 auto;   
+}
+h2 {
+  text-align: center;
+}
+.Produitsphares {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+.image-bieredumoment {
+  text-align:center;
+}
+.evenement {
+  text-align: center;
+}
