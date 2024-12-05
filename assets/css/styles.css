@@ -4,22 +4,44 @@
       align-items: center;
   }
 }
+body, header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 .navbar {
   background-color: #a57c52; 
   color: white;
   padding: 10px 20px;
   display: flex; 
   justify-content: flex-end; 
-  list-style: none; 
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition pour la couleur et la transformation */
+}
+.nav-link:hover {
+  color: #FBB911; 
 }
 .navbar-logo {
   height: 60px;
   margin-left: 0; 
   margin-right: auto; 
 }
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
 .imagelogo {
   text-align: center; 
   margin-top: 0px; 
+}
+.logo {
+  max-width: 400px; 
+  display: block;   
+  margin: 0 auto;   
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -41,38 +63,54 @@ nav ul {
 nav ul li {
     margin: 0 15px;
 }
-p {
-  text-align: center;
+.infos li {
+  font-size: 16px;
+  list-style: none;
 }
-.infos {
-  text-align: center;
+
+.horaires li {
+  font-size: 16px;
+  list-style: none;
 }
-.horaires {
-  text-align: center;
+.btn {
+  background-color: #507A2E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #2b4715;
+  transform: scale(1.1);
 }
 .footer {
   background-color: #a57c52;
   color: white;
+  align-items: center;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px;
 }
-.logo {
-  max-width: 400px; 
-  display: block;   
-  margin: 0 auto;   
+.link-footer:hover {
+  color: #FBB911;
 }
-h2 {
-  text-align: center;
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px; 
+  margin-right: 20px;
 }
-.Produitsphares {
-  text-align: center;
+.socialicon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0,3s ease;
+  transform-origin: center;
 }
-h3 {
-  text-align: center;
-}
-.image-bieredumoment {
-  text-align:center;
-}
-.evenement {
-  text-align: center;
+
+.socialmedia:hover {
+  transform: scale(1,2);
+  filter: brightness(1.2);
 }
