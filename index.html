@@ -12,13 +12,28 @@
     <header>
         <nav class="navbar">
             <img src="assets/icons/Favicon_logo.svg" alt="favicon" class="navbar-logo">
-            <ul>
-                <li><a href="accueil" class="nav-link">Accueil</a></li>
-                <li><a href="apropos" class="nav-link">À propos</a></li>
-                <li><a href="actualites" class="nav-link">Actualités</a></li>
-                <li><a href="contact" class="nav-link">Contact</a></li>
+            <div class="navbar-logo"></div>
+            <button class="menu-toggle" aria-label="Open Menu">
+              ☰
+            </button>
+            <ul class="navbar-links">
+              <li><a href="accueil">Accueil</a></li>
+              <li><a href="apropos">À propos</a></li>
+              <li><a href="actualites">Actualités</a></li>
+              <li><a href="contact">Contact</a></li>
             </ul>
-         </nav>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const menuToggle = document.querySelector(".menu-toggle");
+                  const navbarLinks = document.querySelector(".navbar-links");
+              
+                  menuToggle.addEventListener("click", () => {
+                    navbarLinks.classList.toggle("active");
+                  });
+                });
+              </script>
+          </nav>
+            
         <div class="imagelogo">
           <img src="assets/img/tireuse.jpg" alt="image et logo" class="image-logo">
         </div>
@@ -62,7 +77,7 @@
     </section>
     <section class="horaires">
         <h2>Horaires</h2>
-        <img src="assets/img/maps.png" alt="maps">
+       
         <p>18 Rue des Tonneliers, 67000 Strasbourg</p>
         <p>03.03.03.03.03</p>
            <li>Lundi : 17h-00h</li> 
