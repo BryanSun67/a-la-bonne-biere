@@ -11,45 +11,72 @@
     <header>
         <nav class="navbar">
             <img src="assets/icons/Favicon_logo.svg" alt="favicon" class="navbar-logo">
-            <ul>
-                <li><a href="accueil" class="nav-link">Accueil</a></li>
-                <li><a href="apropos" class="nav-link">À propos</a></li>
-                <li><a href="actualites" class="nav-link">Actualités</a></li>
-                <li><a href="contact" class="nav-link">Contact</a></li>
+            <div class="navbar-logo"></div>
+            <button class="menu-toggle" aria-label="Open Menu">
+              ☰
+            </button>
+            <ul class="navbar-links">
+              <li><a href="accueil">Accueil</a></li>
+              <li><a href="apropos">À propos</a></li>
+              <li><a href="actualites">Actualités</a></li>
+              <li><a href="contact">Contact</a></li>
             </ul>
-        </nav>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const menuToggle = document.querySelector(".menu-toggle");
+                  const navbarLinks = document.querySelector(".navbar-links");
+              
+                  menuToggle.addEventListener("click", () => {
+                    navbarLinks.classList.toggle("active");
+                  });
+                });
+              </script>
+          </nav>  
     </header>
     <img src="assets/icons/LOGO.svg" alt="logo" class="logo">
     <main>
-        <section class="about-intro">
-            <img src="assets/img/Cathedrale.jpg" alt="cathedrale">
+        <div class="about-intro">
+            <img src="assets/img/Cathedrale.jpg" alt="cathedrale" class="cathedrale">
             <p>Situé au cœur du centre historique de Strasbourg, “À la Bonne Bière” est bien plus qu’un simple bar : c’est un lieu chargé d’histoire et de convivialité. Installé dans un bâtiment typique de la ville, avec ses poutres apparentes et son ambiance chaleureuse, ce bar incarne l’esprit alsacien tout en offrant une touche moderne et accueillante.</p>
-        </section>
+        </div>
 
-        <section class="about-history">
-            <img src="assets/img/barman.jpg" alt="serveur">
+        <div class="about-history">
+            <img src="assets/img/barman.jpg" alt="serveur" class="responsive-image">
+            <div class="text">
             <h3>Une passion pour la bière artisanale</h3>
             <p>L’histoire de “À la Bonne Bière” débute avec l’idée de créer un espace où les amateurs de bière pourraient découvrir une sélection variée de saveurs artisanales, locales et internationales. Chaque bière servie ici raconte une histoire, que ce soit une blonde légère brassée en Alsace ou une brune corsée d’inspiration belge.</p>
-        </section>
+            </div>
+        </div>
 
-        <section class="about-team">
-            <img src="assets/img/serveuse.jpg" alt="serveuse">
+        <div class="about-history reverse">
+            <img src="assets/img/serveuse.jpg" alt="serveuse" class="responsive-image">
+            <div class="text">
             <h3>Un lieu de rencontre et de partage</h3>
             <p>Depuis son ouverture, “À la Bonne Bière” est devenu un véritable point de rencontre pour les Strasbourgeois et les visiteurs de passage. Que ce soit pour une soirée entre amis, une dégustation organisée, ou un événement musical, le bar s’efforce de cultiver un esprit de partage et de bonne humeur.</p>
-        </section>
+        </div>
+        </div>
+        <h2>NOS BIÈRES PHARES</h2>
+        <div class="section-bieres">
+            <div class="bieresphares">
+                <img src="assets/img/biereblonde.jpg" alt="biereblonde" class="responsive-image">
+                <div class="text">
+                    <h3>Histoire de la bière blonde : “L’Éclat Doré”</h3>
+                    <p>“L’Éclat Doré” est la bière emblématique de notre bar, une blonde artisanale qui incarne la lumière et la chaleur de Strasbourg. Brassée localement avec des ingrédients de qualité, elle est le fruit d’une collaboration avec une brasserie alsacienne reconnue. Son nom reflète sa couleur dorée lumineuse et sa légèreté, qui en font la compagne idéale pour des soirées conviviales ou des repas entre amis.
 
-        <section id="bieresphares">
-            <h2>NOS BIÈRES PHARES</h2>
-            <img src="assets/img/biereblonde.jpg" alt="biereblonde">
-            <h3>Histoire de la bière blonde : “L’Éclat Doré”</h3>
-            <p>“L’Éclat Doré” est la bière emblématique de notre bar, une blonde artisanale qui incarne la lumière et la chaleur de Strasbourg. Brassée localement avec des ingrédients de qualité, elle est le fruit d’une collaboration avec une brasserie alsacienne reconnue. Son nom reflète sa couleur dorée lumineuse et sa légèreté, qui en font la compagne idéale pour des soirées conviviales ou des repas entre amis.
-                Inspirée des traditions brassicoles européennes, cette bière blonde allie subtilité et caractère. Avec ses arômes floraux et ses notes légèrement maltées, elle offre une expérience rafraîchissante et accessible. Sa finale douce et pétillante séduit aussi bien les amateurs de bières légères que les palais plus exigeants</p>
-            <img src="assets/img/biererousse.jpg" alt="biererousse">
-            <h3>Histoire de la bière rousse : “La Flamme Rousse”</h3>
-            <p>Avec “La Flamme Rousse”, nous rendons hommage aux couleurs chaudes et vibrantes de Strasbourg, notamment celles de ses couchers de soleil et de ses toits de tuiles rouges. Cette bière rousse artisanale, généreuse en saveurs, est brassée selon des méthodes traditionnelles mais avec une touche moderne pour offrir un équilibre parfait entre douceur et puissance.
-               Sa robe ambrée et ses reflets cuivrés captivent dès le premier regard. En bouche, “La Flamme Rousse” dévoile des arômes de caramel, de fruits secs et une pointe d’épices, qui la rendent particulièrement réconfortante. Cette bière est idéale pour accompagner des plats de caractère ou simplement pour savourer un moment de détente dans une ambiance chaleureuse.</p>
-            </section>
-            
+                        Inspirée des traditions brassicoles européennes, cette bière blonde allie subtilité et caractère. Avec ses arômes floraux et ses notes légèrement maltées, elle offre une expérience rafraîchissante et accessible. Sa finale douce et pétillante séduit aussi bien les amateurs de bières légères que les palais plus exigeants.</p>
+                </div>
+            </div>
+        
+            <div class="bieresphares reverse">
+                <img src="assets/img/biererousse.jpg" alt="biererousse" class="responsive-image">
+                <div class="text">
+                    <h3>Histoire de la bière rousse : “La Flamme Rousse”</h3>
+                    <p>Avec “La Flamme Rousse”, nous rendons hommage aux couleurs chaudes et vibrantes de Strasbourg, notamment celles de ses couchers de soleil et de ses toits de tuiles rouges. Cette bière rousse artisanale, généreuse en saveurs, est brassée selon des méthodes traditionnelles mais avec une touche moderne pour offrir un équilibre parfait entre douceur et puissance.
+
+                        Sa robe ambrée et ses reflets cuivrés captivent dès le premier regard. En bouche, “La Flamme Rousse” dévoile des arômes de caramel, de fruits secs et une pointe d’épices, qui la rendent particulièrement réconfortante. Cette bière est idéale pour accompagner des plats de caractère ou simplement pour savourer un moment de détente dans une ambiance chaleureuse.</p>
+                </div>
+            </div>
+        </div>
             <section>
                 <button class="btn">Réserver une table</button>
             </section>
@@ -66,6 +93,17 @@
             <li><a href="mentions" class="link-footer">Mentions légales</a></li>
             <li><a href="confidentialités" class="link-footer">Politique de confidentialités</a></li>
         </ul>
+        <div class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="assets/img/facebook.svg" alt="Facebook" class="socialicon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="assets/img/twitter-x.svg" alt="Twitter" class="socialicon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="assets/img/instagram.svg" alt="Instagram" class="socialicon">
+            </a>
+        </div>
         <p>&copy; 2024 À la Bonne Bière - Tous droits réservés.</p>
     </footer>
 </body>

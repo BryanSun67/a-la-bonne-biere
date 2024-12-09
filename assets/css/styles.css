@@ -4,6 +4,18 @@
       align-items: center;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclut marges et bordures dans les dimensions */
+}
+
+
+html, body {
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  overflow-x: hidden; /* Empêche le scroll horizontal */ 
+  width: 100%; /* S'assure que tout est limité à la largeur de l'écran */
+}
 body, header {
   margin: 0;
   padding: 0;
@@ -36,14 +48,15 @@ body, header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0;
   background-color: #a57c52; 
+  width: 100%;
 }
 .navbar-links {
   display: none; /* Hidden by default on mobile */
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 1rem;
   transform: scale(1.1);
   color: #FBB911;
 }
@@ -97,11 +110,9 @@ body, header {
   padding: 10px;
   border-radius: 5px;
 }
-.image-logo {
-  max-width: 1200px;
-  margin: 0%;
-  max-height: 400px;
-  object-fit: contain;
+.imagelogo {
+  max-width: 100%;
+  margin: 0 auto;
   width: 100%;
   height: auto;
   display: block;
@@ -120,6 +131,13 @@ h1 {
   font-weight: 700;
   text-align: center;
 }
+.accueil {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 a {
     text-decoration: none;
     color: #fcfcfc;
@@ -131,11 +149,87 @@ nav ul {
 nav ul li {
     margin: 0 15px;
 }
-.infos li {
-  font-size: 16px;
-  list-style: none;
+.bieredumoment {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Par défaut pour mobile */
+  align-items: center;
+  gap: 1rem; /* Espacement */
+  padding: 1rem;
 }
 
+.responsive-image {
+  width: 500px; /* L'image prend la largeur disponible */
+  max-width: 600px; /* Limite en mode mobile */
+  height: auto; /* Préserve les proportions */
+  border-radius: 10px;
+}
+
+.text {
+  text-align: center; /* Centré en mobile */
+  max-width: 600px; /* Largeur maximale du texte */
+}
+
+@media (min-width: 768px) {
+  .bieredumoment {
+    flex-direction: row; /* Passe en ligne en mode desktop */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Égalise l'espace */
+    gap: 10rem;
+  }
+
+  .responsive-image {
+    width: 30%; /* L'image occupe 40% de la largeur en desktop */
+    max-width: 350px; /* Limite la taille */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .text {
+    text-align: left; /* Aligne à gauche le texte en desktop */
+    max-width: 30%; /* Limite la largeur du texte */
+  }
+}
+
+.evenement {
+  display: flex;
+  flex-direction: column; /* Par défaut sur mobile */
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .evenement {
+      flex-direction: row-reverse; /* Image à droite, texte à gauche */
+      align-items: center;
+      justify-content: center;
+      gap: 10rem; /* Espacement entre le texte et l'image */
+  }
+
+  .responsive-image {
+      width: auto; /* Ajuste la taille de l'image */
+      max-width: 300px; /* Limite la taille maximale de l'image */
+      height: auto;
+      flex-shrink: 0; /* Empêche l'image de se rétrécir */
+  }
+
+  .text-content {
+      max-width: 30%; /* Limite la largeur du texte */
+      text-align: left;
+  }
+
+  .infos {
+      margin-top: 2rem; /* Espacement entre le texte et la liste */
+  }
+}
+.lien-actualités {
+  color:#007bff;
+
+}
+.horaires {
+  color: #000000;
+}
 .horaires li {
   font-size: 16px;
   list-style: none;
@@ -162,6 +256,7 @@ nav ul li {
   text-align: center;
   padding: 20px;
   display: flex;
+  width: 100%;
 }
 .link-footer:hover {
   color: #FBB911;
@@ -183,5 +278,159 @@ nav ul li {
 
 .socialicon:hover {
   transform: scale(1.2); /* Agrandit uniquement l'icône survolée */
-  filter: invert(0.5) sepia(1) hue-rotate(25deg) saturate(3) brightness(1.5); /* Applique une teinte dorée */
+  filter: invert(0.5) sepia(1) hue-rotate(25deg) saturate(3) brightness(2); /* Applique une teinte dorée */
+}
+
+/* page à propos */
+
+.cathedrale {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .cathedrale {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-history {
+  display: flex;
+  flex-direction: column; /* Par défaut pour les petits écrans */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espacement entre l'image et le texte */
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-history img {
+  width: 100%; /* L'image prend la largeur disponible */
+  max-width: 300px; /* Taille maximale de l'image */
+  height: auto; /* Préserve les proportions */
+  border-radius: 10px; /* Coins arrondis (optionnel) */
+}
+
+.about-history .text {
+  text-align: center; /* Centrage du texte sur les petits écrans */
+  max-width: 600px; /* Limite la largeur du texte */
+}
+
+@media (min-width: 1080px) {
+  .about-history {
+    flex-direction: row; /* Dispose en ligne pour les écrans moyens et grands */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    justify-content: center; /* Équilibre l'espace entre les éléments */
+    gap: 2rem; /* Ajuste l'espacement */
+  }
+
+  .about-history .text {
+    text-align: left; /* Alignement à gauche pour une lecture fluide */
+    max-width: 30%;
+  }
+
+  .about-history img {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    max-width: 300px;
+  }
+}
+.about-history {
+  display: flex;
+  flex-direction: column; /* Par défaut pour les petits écrans */
+  align-items: center;
+  gap: 1rem; /* Espacement entre l'image et le texte */
+  padding: 5rem;
+}
+
+.about-history img {
+  width: 100%; /* L'image prend la largeur disponible */
+  max-width: 450px; /* Taille maximale de l'image */
+  height: auto; /* Préserve les proportions */
+  border-radius: 10px; /* Coins arrondis (optionnel) */
+}
+
+.about-history .text {
+  text-align: center; /* Centrage du texte sur les petits écrans */
+  max-width: 500px; /* Limite la largeur du texte */
+  margin-top: 1rem;
+}
+
+@media (min-width: 1080px) {
+  .about-history {
+    flex-direction: row; /* Dispose en ligne pour les écrans moyens et grands */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    justify-content: space-between; /* Équilibre l'espace entre les éléments */
+    gap: 1rem; /* Ajuste l'espacement */
+  }
+
+  .about-history .text {
+    text-align: center; /* Alignement à gauche pour une lecture fluide */
+    max-width: 500px;
+  }
+  .about-history.reverse {
+    flex-direction: row-reverse;
+  }
+  .about-team img {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+  }
+}
+/* Styles généraux */
+.bieresphares {
+  display: flex;
+  flex-direction: column; /* Affichage en colonne par défaut */
+  align-items: center;
+  gap: 2rem; /* Espacement entre image et texte */
+  padding: 1rem;
+  max-width: 1000px; /* Largeur maximale du conteneur */
+  margin: 0 auto; /* Centre le conteneur */
+}
+
+.bieresphares img {
+  width: 100%; /* Image prend toute la largeur disponible */
+  max-width: 400px; /* Taille maximale de l'image */
+  height: auto; /* Conserve les proportions */
+  border-radius: 10px; /* Coins arrondis */
+  margin-left: 2rem;
+}
+
+.bieresphares .text {
+  text-align: center; /* Texte centré pour les petits écrans */
+  max-width: 500px; /* Largeur maximale du texte */
+  margin-top: 1rem;
+}
+
+/* Styles pour écrans moyens et grands */
+@media (min-width: 768px) {
+  .bieresphares {
+    flex-direction: row; /* Affichage en ligne */
+    align-items: center; /* Aligne les éléments verticalement */
+    justify-content: space-between; /* Centre les éléments horizontalement */
+    gap: 4rem; /* Réduit l'espace entre image et texte */
+  }
+
+  .bieresphares.reverse {
+    flex-direction: row-reverse; /* Inverse l'ordre des éléments */
+  }
+
+  .bieresphares .text {
+    text-align: center; /* Texte aligné à gauche */
+    margin-right: 0,5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .bieresphares {
+    gap: 3,5rem; /* Réduit davantage l'espacement entre image et texte */
+  }
 }
