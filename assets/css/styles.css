@@ -14,7 +14,6 @@ body, header {
   padding: 0;
   text-align: center;
 }
-
 .nav-link {
   text-decoration: none;
   color: #fff;
@@ -173,7 +172,7 @@ nav ul li {
 
   .responsive-image {
     width: 30%; /* L'image occupe 40% de la largeur en desktop */
-    max-width: 350px; /* Limite la taille */
+    max-width: 400px; /* Limite la taille */
     height: auto;
     object-fit: cover;
   }
@@ -201,8 +200,7 @@ nav ul li {
   }
 
   .responsive-image {
-      width: auto; /* Ajuste la taille de l'image */
-      max-width: 300px; /* Limite la taille maximale de l'image */
+      max-width: 400px; /* Limite la taille maximale de l'image */
       height: auto;
       flex-shrink: 0; /* Empêche l'image de se rétrécir */
   }
@@ -247,7 +245,7 @@ nav ul li {
   color: white;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding:0;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -279,8 +277,6 @@ nav ul li {
 /* page à propos */
 
 .cathedrale {
-  width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 10px;
 }
