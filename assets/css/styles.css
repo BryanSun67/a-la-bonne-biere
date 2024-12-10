@@ -4,13 +4,6 @@
       align-items: center;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Inclut marges et bordures dans les dimensions */
-}
-
-
 html, body {
   overflow-x: hidden; /* Empêche le scroll horizontal */
   overflow-x: hidden; /* Empêche le scroll horizontal */ 
@@ -110,13 +103,7 @@ body, header {
   padding: 10px;
   border-radius: 5px;
 }
-.imagelogo {
-  max-width: 100%;
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 .logo {
   max-width: 400px; 
   display: block;   
@@ -148,6 +135,12 @@ nav ul {
 }
 nav ul li {
     margin: 0 15px;
+}
+#biererousse.jpg {
+  max-width: 100%;
+  width: 80%;
+  gap: 5rem;
+
 }
 .bieredumoment {
   display: flex;
@@ -257,6 +250,8 @@ nav ul li {
   padding: 20px;
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
 }
 .link-footer:hover {
   color: #FBB911;
