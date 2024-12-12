@@ -144,7 +144,10 @@ nav ul {
 nav ul li {
     margin: 0 15px;
 }
-
+.styled-link {
+  color: #007BFF; /* Bleu */
+  text-decoration: underline;
+}
 .bieredumoment {
   display: flex;
   justify-content: center;
@@ -423,6 +426,7 @@ nav ul li {
   .bieresphares .text {
     text-align: center; /* Texte aligné à gauche */
     margin-right: 0,5rem;
+    max-width: 500px;
   }
 }
 
