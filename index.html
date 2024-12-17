@@ -10,34 +10,30 @@
     </head>
 <body>
     <header>  
+
+        <!-- Section navbar -->
+
         <nav class="navbar">
-            <a href="/index.html">
+            <a href="../a-la-bonne-biere/index.html">
             <img src="assets/icons/Favicon_logo.svg" alt="favicon" class="navbar-logo">
             </a>
             <button class="menu-toggle" aria-label="Open Menu">
             ☰
             </button>
             <ul class="navbar-links">
-              <li><a href="/index.html">Accueil</a></li>
-              <li><a href="/apropos.html">À propos</a></li>
+              <li><a href="../a-la-bonne-biere/index.html">Accueil</a></li>
+              <li><a href="../a-la-bonne-biere/apropos.html">À propos</a></li>
               <li><a href="actualites">Actualités</a></li>
               <li><a href="contact">Contact</a></li>
             </ul>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const menuToggle = document.querySelector(".menu-toggle");
-                  const navbarLinks = document.querySelector(".navbar-links");
-              
-                  menuToggle.addEventListener("click", () => {
-                    navbarLinks.classList.toggle("active");
-                  });
-                });
-            </script>
         </nav>   
-        <div class="logo">
+      </header>  
+      
+      <!-- Section introduction -->
+
+      <div class="logo">
             <img src="assets/icons/LOGO.svg" alt="logo" class="logo"> 
         </div>
-    </header>
         <div class="accueil">
             <h1>Bienvenue À la Bonne Bière</h1>
             <p>Plongez dans l’univers chaleureux de notre bar, où la passion pour la bière rencontre la convivialité. Que vous soyez amateur de bières artisanales, curieux de découvrir de nouvelles saveurs, ou simplement à la recherche d’un endroit accueillant pour partager un bon moment, notre équipe est là pour vous. Chez nous, chaque bière raconte une histoire : de la sélection minutieuse des ingrédients à la magie du brassage, en passant par les inspirations de nos artisans brasseurs. Que vous soyez adepte des bières blondes légères et florales, des brunes riches et corsées, ou des créations saisonnières surprenantes, notre carte saura éveiller vos papilles. Explorez notre histoire, découvrez nos actualités, et n’hésitez pas à nous contacter pour toute question. Santé !</p>
@@ -55,6 +51,9 @@
         <a href="apropos.html#bieres-phares" class="styled-link"><strong><u>À propos</u></strong></a>.
     </p>
     </div>
+
+    <!-- Section bière du moment -->
+
     <h2>Bière du moment</h2>
     <div class="bieredumoment">
             <img src="assets/img/bieredumoment.jpeg" alt="bieredumoment" class="responsive-image">
@@ -67,9 +66,12 @@
     
     <section>
         <article>
-            <h3>Événement : Soirée Jazz Live – Une expérience musicale à ne pas manquer !</h3>
-            <div class="evenement">
-                <img src="assets/img/jazz.jpg" alt="evenement" class="responsive-image">
+    
+    <!-- Section événement -->
+
+    <h3>Événement : Soirée Jazz Live – Une expérience musicale à ne pas manquer !</h3>
+    <div class="evenement">
+         <img src="assets/img/jazz.jpg" alt="evenement" class="responsive-image">
                 <div class="text-content">
                     <p>Plongez dans l’atmosphère feutrée de notre bar pour une soirée dédiée au jazz live. Nous accueillons des artistes talentueux qui vous feront voyager à travers des standards de jazz, des compositions originales et des improvisations captivantes.</p>
                     <p><strong><u>Infos Pratiques :</u></strong></p>
@@ -86,6 +88,9 @@
     <section>
         <p><strong>En savoir plus dans les <a href="" class="lien-actualités"><u>Dernières actualités</u></strong></p>
     </section>
+
+    <!-- Section horaires -->
+
     <section class="horaires">
         <h2>Horaires</h2>
         <iframe 
@@ -110,9 +115,12 @@
         <button class="btn">Réserver une table</button>
     </section>
     <footer>
+
+    <!-- Section footer -->
+
         <nav class="footer">
             <ul>
-                <li><a href="/apropos.html" class="link-footer">Qui sommes nous ?</a></li>
+                <li><a href="../a-la-bonne-biere/apropos.html" class="link-footer">Qui sommes nous ?</a></li>
                 <li><a href="actualites" class="link-footer">Nos actualités</a></li>
                 <li><a href="contact" class="link-footer">Nous contacter</a></li>
             </ul>

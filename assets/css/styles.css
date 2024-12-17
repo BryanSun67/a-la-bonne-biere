@@ -1,11 +1,6 @@
-@media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-}
+/* Styles et parametre par defaut */
+
 html, body {
-  overflow-x: hidden; /* Empêche le scroll horizontal */
   overflow-x: hidden; /* Empêche le scroll horizontal */ 
   width: 100%; /* S'assure que tout est limité à la largeur de l'écran */
 }
@@ -15,15 +10,53 @@ body, header {
   text-align: center;
 }
 
+/* Navigation principale (Header) */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: #a57c52; 
+  width: 100%;
+}
+.navbar-links {
+  display: none; 
+  list-style: none;
+  padding: 0;
+  margin: 0 1rem;
+  transform: scale(1.1);
+  color: #FBB911;
+}
+
+.navbar-links li {
+  margin: 10px 0; 
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease; 
+}
+.navbar-links a:hover {
+  color: #FBB911; /* Couleur survolée */
+}
 .nav-link {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
   padding: 10px 20px;
-  transition: color 0.3s ease, transform 0.3s ease; /* Transition pour la couleur et la transformation */
+  transition: color 0.3s ease, transform 0.3s ease; 
 }
 .nav-link:hover {
   color: #FBB911; 
+}
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 .navbar-logo {
   height: 60px;
@@ -36,39 +69,6 @@ body, header {
   transform: scale(1.1);
   filter:drop-shadow(5px 7px 6px #000000);
 }
-
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  background-color: #a57c52; 
-  width: 100%;
-}
-.navbar-links {
-  display: none; /* Hidden by default on mobile */
-  list-style: none;
-  padding: 0;
-  margin: 0 1rem;
-  transform: scale(1.1);
-  color: #FBB911;
-}
-
-.navbar-links li {
-  margin: 10px 0; /* Spacing between links in mobile menu */
-}
-
-.navbar-links a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s ease; 
-}
-.navbar-links a:hover {
-  color: #FBB911; /* Couleur survolée */
-}
-
 .menu-toggle {
   font-size: 24px;
   background: none;
@@ -76,26 +76,28 @@ body, header {
   color: #ffffff;
   cursor: pointer;
 }
-
 .menu-toggle:focus {
   outline: none;
 }
+.menu-toggle:hover {
+  color: #FBB911; /* Couleur survolée */
+}
 @media (min-width: 768px) {
   .menu-toggle {
-    display: none; /* Hide burger button on desktop */
+    display: none; 
   }
 
   .navbar-links {
-    display: flex; /* Display links inline on desktop */
+    display: flex; 
     gap: 20px;
   }
 
   .navbar-links li {
-    margin: 0; /* Remove spacing between links */
+    margin: 0; 
   }
 }
 .navbar-links.active {
-  display: flex; /* Show menu on mobile when active */
+  display: flex; 
   flex-direction: column;
   position: absolute;
   top: 60px;
@@ -105,10 +107,12 @@ body, header {
   border-radius: 5px;
 }
 
+/* Section d'introduction */
+
 .logo {
   max-width: 400px; 
   display: block;   
-  margin: 0 auto;   
+  margin: 0 auto;  
 }
 section {
   margin: 40px 0;
@@ -132,7 +136,6 @@ h2 {
   margin: 0 auto;
   padding: 20px;
 }
-
 a {
     text-decoration: none;
     color: #fcfcfc;
@@ -145,9 +148,12 @@ nav ul li {
     margin: 0 15px;
 }
 .styled-link {
-  color: #007BFF; /* Bleu */
+  color: #007BFF; 
   text-decoration: underline;
 }
+
+/* Section bière du moment */
+
 .bieredumoment {
   display: flex;
   justify-content: center;
@@ -192,9 +198,11 @@ nav ul li {
   }
 }
 
+/* Section événement */
+
 .evenement {
   display: flex;
-  flex-direction: column; /* Par défaut sur mobile */
+  flex-direction: column; 
   align-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -211,7 +219,7 @@ nav ul li {
   .responsive-image {
       max-width: 400px; /* Limite la taille maximale de l'image */
       height: auto;
-      flex-shrink: 0; /* Empêche l'image de se rétrécir */
+      flex-shrink: 0; 
   }
 
   .text-content {
@@ -220,13 +228,16 @@ nav ul li {
   }
 
   .infos {
-      margin-top: 2rem; /* Espacement entre le texte et la liste */
+      margin-top: 2rem; 
   }
 }
 .lien-actualités {
   color:#007bff;
 
 }
+
+/* Section Horaires */
+
 .horaires {
   color: #000000;
 }
@@ -249,6 +260,9 @@ nav ul li {
   background-color: #2b4715;
   transform: scale(1.1);
 }
+
+/* Section footer */
+
 .footer {
   background-color: #a57c52;
   color: white;
@@ -280,7 +294,7 @@ nav ul li {
 
 .socialicon:hover {
   transform: scale(1.2); /* Agrandit uniquement l'icône survolée */
-  filter: invert(0.5) sepia(1) hue-rotate(25deg) saturate(3) brightness(2); /* Applique une teinte dorée */
+  filter: invert(0.5) sepia(1) hue-rotate(25deg) saturate(3) brightness(2); /* Applique une teinte dorée parce qu'en mettant les codes couleurs ça ne fait rien */
 }
 
 /* page à propos */
@@ -296,6 +310,8 @@ nav ul li {
     margin: 0 auto;
   }
 }
+
+/* Section histoire du bar */
 
 .about-intro {
   text-align: center;
@@ -341,13 +357,12 @@ nav ul li {
   }
 
   .about-history img {
-    flex-shrink: 0; /* Empêche l'image de rétrécir */
     max-width: 300px;
   }
 }
 .about-history {
   display: flex;
-  flex-direction: column; /* Par défaut pour les petits écrans */
+  flex-direction: column; 
   align-items: center;
   gap: 1rem; /* Espacement entre l'image et le texte */
   padding: 5rem;
@@ -355,14 +370,14 @@ nav ul li {
 
 .about-history img {
   width: 100%; /* L'image prend la largeur disponible */
-  max-width: 450px; /* Taille maximale de l'image */
-  height: auto; /* Préserve les proportions */
-  border-radius: 10px; /* Coins arrondis (optionnel) */
+  max-width: 450px; 
+  height: auto; /* Garde les proportions */
+  border-radius: 10px; 
 }
 
 .about-history .text {
-  text-align: center; /* Centrage du texte sur les petits écrans */
-  max-width: 500px; /* Limite la largeur du texte */
+  text-align: center; 
+  max-width: 500px; 
   margin-top: 1rem;
 }
 
@@ -381,11 +396,11 @@ nav ul li {
   .about-history.reverse {
     flex-direction: row-reverse;
   }
-  .about-team img {
-    flex-shrink: 0; /* Empêche l'image de rétrécir */
-  }
+
 }
-/* Styles généraux */
+
+/* Section bières phares */
+
 .bieresphares {
   display: flex;
   flex-direction: column; /* Affichage en colonne par défaut */
@@ -399,8 +414,8 @@ nav ul li {
 .bieresphares img {
   width: 100%; /* Image prend toute la largeur disponible */
   max-width: 400px; /* Taille maximale de l'image */
-  height: auto; /* Conserve les proportions */
-  border-radius: 10px; /* Coins arrondis */
+  height: auto; 
+  border-radius: 10px;
   margin-left: 2rem;
 }
 
@@ -413,10 +428,10 @@ nav ul li {
 /* Styles pour écrans moyens et grands */
 @media (min-width: 768px) {
   .bieresphares {
-    flex-direction: row; /* Affichage en ligne */
-    align-items: center; /* Aligne les éléments verticalement */
-    justify-content: space-between; /* Centre les éléments horizontalement */
-    gap: 4rem; /* Réduit l'espace entre image et texte */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 4rem; 
   }
 
   .bieresphares.reverse {
@@ -424,7 +439,7 @@ nav ul li {
   }
 
   .bieresphares .text {
-    text-align: center; /* Texte aligné à gauche */
+    text-align: center; 
     margin-right: 0,5rem;
     max-width: 500px;
   }
@@ -432,6 +447,6 @@ nav ul li {
 
 @media (min-width: 1080px) {
   .bieresphares {
-    gap: 3,5rem; /* Réduit davantage l'espacement entre image et texte */
+    gap: 3,5rem;
   }
 }
